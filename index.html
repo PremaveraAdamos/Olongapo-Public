@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="jquery/jquery.mobile-1.4.5.min.css" />
+	<script src="jquery/jquery-1.11.1.min.js"></script>
+	<script src="jquery/jquery.mobile-1.4.5.min.js"></script>
+	<link href='http://fonts.googleapis.com/cssÃ¢â‚¬Â¦' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+	</script>
+	<script type="text/javascript">
+	
+	<!------------------------ Scrip  ------------------------------->
+	
+	
+		var markers2 = [
+		<!--Hospitals and Medicals-->
+		['James L. Gordon Hospitals',14.8263973,120.2803707],
+		['Boypointe Hospital Medical Center',14.8239872,120.2722548],
+		['Mother and Child Family Hospital',14.8299486,120.2869236],
+		['Sta. Veronica General Hospital',14.8771143,120.2950759],
+		['Baypoint Hospital and Medical Center Clinic',14.8250157,120.2779612],
+		['Afable Medical Center',14.838678,120.284674],
+		['Our Lady of Lourdes International Medical Center',14.8475503,120.26918],
+		['Calapatia Polymedic Hospital Plaza',14.8424439,120.2887649]
+		];
+	function Hospitals() {
+		var myOptions = {
+			disableDefaultUI: true,
+			mapTypeId: google.maps.MapTypeId.ROADMAP,
+			mapTypeControl: false
+		};
+		var map = new google.maps.Map(document.getElementById("map_canvas"),myOptions);
+		var infowindow = new google.maps.InfoWindow();
+		var marker, i;
+		var bounds = new google.maps.LatLngBounds();
+		
+		for (i = 0; i < markers2.length; i++) {
+			var pos = new google.maps.LatLng(markers2[i][1], markers2[i][2]);
+			bounds.extend(pos);
+			marker = new google.maps.Marker({
+				position: pos,
+				map: map
+			});
+			google.maps.event.addListener(marker, 'click', (function(marker, i){
+				return function() {
+					infowindow.setContent(markers2[i][0]);
+					infowindow.open(map, marker);
+				}	
+			})(marker, i));
+		}
+		map.fitBounds(bounds);
+	}
+	
+	var newwindow;
+function poptastic(url)
+{
+	newwindow=window.open(url,'name','height=400,width=200');
+	if (window.focus) {newwindow.focus()}
+}
+	</script>
+</head>
+<body onload="newWindow();">
+ 
+ <!-- ************* PAGE ONE ************* -->
+ 
+ 
+ <div data-role="page" id="page1">
+	<div data-role="panel" id="panel1" data-display="reveal" data-theme="b">
+		<div data-role="collapsibleset" data-theme="b">
+					
+			<img class="popphoto" src="image/1banner.jpg" alt="Hospital" style= "width:100%; height:300px"><br>
+			 <img class="popphoto" src="image/we.jpg" alt="Hospital" style= "width:100%; height:50px"><br>
+				<center><b>Olongapo, officially the City of Olongapo (Sambali: Syodad in Olongapo
+				Filipino: Lungsod ng Olongapo) and often referred to as Olongapo City,
+				is a highly urbanized city located in the province of Zambales, Philippines.
+				It has a population of 221,178 people according to the 2010 census.
+				Along with the town of Subic, it comprises Metro Olongapo,
+				one of the twelve metropolitan areas in the Philippines</b></center>
+				 <div align="center"></div></div>
+				 <img class="popphoto" src="image/we.jpg" alt="Hospital" style= "width:100%; height:50px"><br>
+ 
+ 
+ 
+ 
+ 
+ 
+<!-- ************* Front Page ************* -->
+<div data-role="page" id="page1">
+	<div data-role="panel" id="panel1" data-display="reveal" data-theme="b">
+	<center>
+		<h3>Olongapo City Private And Public Hospital Information </h3></center>
+			<div data-role="collapsibleset" data-theme="b">
+			
+			
+			<img class="popphoto" src="image/h3.jpg" alt="Hospital" style= "width:100%; height:300px">
+				<center><br><p><b>Unihealth Baypointe Hospital and Medical Center</b> </p>
+                 Block 8, Lot 1A and 1B Dewey Avenue<br> Subic Bay Freeport Zone, Philippines, 2222<br>
+                 Subic Office: (047) 250-6070 Local  100<br>
+                 Manila Office: (047) 250-6070 Local 100<br>
+                 mail: info@unihealthbaypointe.com <br></center>
+				 <div align="center"></div></div><br>
+				 
+				 
+	<!---------------------------------------------------- Hosital Info                  -------------------------------------->		
+
+
+			<img class="popphoto" src="image/h4.jpg" alt="Hospital" style= "width:100%; height:300px">
+			<br><p><b><center> Ridons St. Jude Medical Center </p></b>
+				 #62 18th cor Harris St., Olongapo City<br>
+				 Olongapo Office:(047)  222-4404<br>
+				                 (047)  222-4436<br></center>
+					<div align="center"></div><br>			 
+								 
+	<!---------------------------------------------------                  ------------------------------------->				 
+								 
+							
+			<img class="popphoto" src="image/L.jpg" alt="Hospital" style= "width:100%; height:300px"><br>	
+			<center><br><p><b> Our Lady Of Lourdes International </p></b>
+                   # 2 National Highway, Barrio Barretto <br>
+				    Olongapo City,Zambales <br>
+                    Subic Office:+63(47) 222-9012 <br> </center>
+					<div align="center"></div><br>			 
+								 
+	<!----------------------------------------------------  Information About                 ----------------------------------->							 
+					
+			<img class="popphoto" src="image/G.jpg" alt="Hospital" style= "width:100%; height:300px""><br>
+			
+			     <center><p><b> James L. Gordon Memorial Hospital </p></b>
+					Perimeter Road, Olongapo City, Philippines 2200<br>
+					Telephone Number: (047) 223-7571-75<br>
+					Telefax: (047) 222-2867<br>
+					E-mail:  jlgmh.org@gmail.com <br>
+					Website: http://jlgmh.org/ <br></center>
+				<div align="center"></div><br>
+				
+<!----------------------------------------------------  Information About The Developer  ------------------------------------->
+        <center>
+      <p><b>About The Developer</p></b>
+	  <img class="popphoto" src="image/Me.jpg" alt="Me" style="width:100%; height:300px"><br>
+	 <div data-role="main" class="ui-content">	
+    <b>Olongapo City Private And Public Hospital Information </b><br>
+           is a mobile web mapping application <br> developed by: Premavera U.Adamos <br>
+		   E-mail: primaadamos12@gmail.com<br></center>
+			<div align="center"></div></div>
+			        <br><br>
+<!---------------------------------------------------- This Buttton Will be view the Map  -------------------------------------->			
+	      	
+			 <center>
+				<input type="button" value="View  Map" onclick="Hospitals();"><br><br>
+				<div data-role="main" class="ui-content">
+				<div id="map_canvas" style="width:100%; height:400px"></center>
+				<div align="center">
+				<div data-role="footer" data-theme="b">
+			   	</center></div></div></div></div><br><br>
+							
+					
+
+<!---------------------------------------------------- Footer  -------------------------------------->				
+	        
+     <div data-role="footer" data-theme="b">
+			<center>
+			<a href="#page1" data-icon="home" data-transition="none">Home</div></a>
+			</center>
+		  
+	
+<!----------------------------------------------------  End       ------------------------------------->	
+<script>
+// Popup window code
+function newWindow() 
+{
+	popupWindow =  alert('Welcome to the coolest mobile app.Now you can choose your own location');
+}
+</script>	
+</body>
+</html>
